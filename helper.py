@@ -1,3 +1,10 @@
+from pyrogram.client import Client  # Explicit import for Client
+from pyrogram import filters
+from instaloader import Instaloader, Post
+import re
+import os
+import shutil
+
 async def linkdownload_and_send(link, chat_id):
     id_pattern = r"(/p/|/reel/)([a-zA-Z0-9_-]+)/"
     match = re.search(id_pattern, link)
