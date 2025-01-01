@@ -4,6 +4,7 @@ from instaloader import Instaloader, Post
 import re
 import os
 import shutil
+from helper import *
 
 api_id = '29388606'  
 api_hash = 'ddc1032e4e1fd0216362d18b68afd848'
@@ -23,7 +24,7 @@ async def start(client, message):
 async def handle_message(client, message):
     link = message.text.strip()
     if "instagram.com" in link:
-        response = await linkdownload_and_send(link, message.chat.id)
+        response = await helper.linkdownload_and_send(link, message.chat.id)
         await message.reply(response)
     else:
         await message.reply("Please send a valid Instagram link.")
