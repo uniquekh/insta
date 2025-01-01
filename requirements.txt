@@ -6,4 +6,3 @@ itsdangerous==2.0.1
 pyrogram
 instaloader
 yt-dlp
-tgcypto
